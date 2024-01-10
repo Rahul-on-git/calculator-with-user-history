@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100vh;
+    }
+    
+  }
+
+.parent-container-calc {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(10px, 80px));
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    gap: 1px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    grid-template-rows: minmax(90px, auto) repeat(6, auto);
+    margin: 0.5rem;
+}
+
+.parent-container-calc > * {
+    padding: 1.5rem;
+    border: 1px white;
+    border-radius: 2px;
+    font-size: 1.2rem;
+}
+
+.parent-container-calc > *:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.screen {
+    grid-column: 1/5;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.screen:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: default;
+}
+
+.screen > * {
+    padding: 0.2rem;
+}
+
+.screen-curr {
+    font-size: 1.3rem;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.equals {
+    background-color: rgba(255, 123, 0, 0.9);
+}
+
+.equals:hover {
+    background-color: rgba(255, 123, 0, 0.8);
+}
+
+.clear {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+.clear:hover {
+    background: rgba(255, 0, 0, 0.7);
+}
+
+.err {
+    border: 4px solid rgb(255, 0, 0, 0.7);
+    border-radius: 4px;
+}
+
+.history {
+    align-self: center;
+    height: calc(90px + 6*3.7rem);
+    width : calc(4*80px);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 2px;
+    overflow-y: auto;
+}
+
+.historyItem {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding : 1rem;
+    margin : 0.2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.historyItem:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
