@@ -73,7 +73,7 @@ class Calculator {
     }
 
     computeEquals () {
-        if(this.currentOp==='') return
+        if(this.current.innerText==='') return
         this.addToHistory()
 
         switch (this.operator) {
