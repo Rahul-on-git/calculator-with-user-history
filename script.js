@@ -121,7 +121,6 @@ class Calculator {
         
         let historyElement = document.createElement('div')
         let historyItem = `${this.prevOp.slice(0,-1)} ${this.operator} ${this.currentOp}`
-        console.log(historyItem)
         historyElement.innerText = historyItem
         historyElement.classList.add('historyItem')
         historyBox.appendChild(historyElement)
