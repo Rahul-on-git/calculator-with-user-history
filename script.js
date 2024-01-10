@@ -73,7 +73,7 @@ class Calculator {
     }
 
     computeEquals () {
-        if(!(/[-+÷x]/.test(this.current.innerText))) return
+        if(!(/[0-9]/.test(this.current.innerText))) return
         this.addToHistory()
 
         switch (this.operator) {
